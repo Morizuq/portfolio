@@ -3,11 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --foreground-rgb: #fff;
+  --background-start-rgb: #222123;
   --background-end-rgb: 255, 255, 255;
+  --color-primary: #d0a41e;
+  --color-primary-dark: #3b2e01;
+  --text-light: #ffffffb0;
 }
 
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -15,13 +19,97 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+*/
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: var(--foreground-rgb);
+  background: var(--background-start-rgb);
+}
+
+.text-gold {
+  color: var(--color-primary);
+}
+
+.text-light {
+  color: var(--text-light);
+}
+
+.text-space {
+  letter-spacing: 0.2rem;
+}
+
+.btn {
+  font-family: initial;
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  border-radius: 3px;
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+}
+
+.glass {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5rem);
+  border-radius: 0.7rem;
+  /* box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, 0.4); */
+}
+
+p {
+  line-height: 1.7;
+}
+
+.card {
+  height: 100%;
+  /* background-color: blue; */
+  width: 18rem;
+}
+
+.shadow-custom {
+  box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, 0.4);
+}
+
+.api-card {
+  line-height: 1.7;
+  border: 1px solid var(--color-primary);
+  padding: 0.7rem 1rem;
+}
+
+.btn-ct {
+  border: 1px solid var(--color-primary);
+  border-radius: 7px;
+  /* padding: 1rem;
+  height: 4rem;
+  width: 4rem; */
+}
+
+.label {
+  display: block;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+  margin-left: 1rem;
+  font-weight: 300;
+  transition: all 0.3s;
+}
+
+.input {
+  border: 3px solid var(--color-primary);
+  padding: 0.4rem 0.6rem;
+  border-radius: 5px;
+  background-color: #fff;
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  color: #222123;
+}
+
+.grad {
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    to bottom right,
+    var(--color-primary),
+    var(--color-primary-dark)
+  );
+
+  background-clip: text;
+  color: transparent;
 }
