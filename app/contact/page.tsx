@@ -30,7 +30,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="p-10">
+    <div className="p-8 sm:p-10">
       <h2 className="uppercase sm:text-4xl text-3xl text-center mb-9 grad">Contact Me</h2>
       <div className="flex sm:flex-row flex-col justify-between">
         {submitted ? (
@@ -42,25 +42,25 @@ export default function Contact() {
           </div>
         ) : (
           <form
-            className="glass w-[100%] sm:w-[70%] md:w-[60%] p-11"
+            className="glass w-[100%] sm:w-[70%] md:w-[60%] p-4 sm:p-11"
             onSubmit={handleSubmit}
             method="POST"
           >
             <label htmlFor="name" className="label">
               Your Name:
             </label>
-            <input type="text" name="name" id="name" className="input" />
+            <input type="text" name="name" id="name" className="input w-[94%] sm:w-[80%]" />
             <label htmlFor="email" className="label">
               Your Email:
             </label>
-            <input type="email" name="email" id="email" className="input" />
+            <input type="email" name="email" id="email" className="input w-[94%] sm:w-[80%]" />
             <label htmlFor="text" className="label">
               Message:
             </label>
-            <textarea name="message" id="message" className="input" />
+            <textarea name="message" id="message" className="input w-[94%] sm:w-[80%]" />
             <button
               type="submit"
-              className="btn hover:translate-y-3 ease-in-out duration-500 mt-5 mb-1"
+              className="btn hover:translate-y-3 ease-in-out duration-500 ml-3 sm:ml-2 mt-5 mb-1"
             >
               Send Message
             </button>

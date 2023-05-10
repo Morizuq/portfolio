@@ -20,11 +20,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={pridi.className}>
         <nav className="flex justify-between mt-5 pl-4 pr-4 mb-5">
-          <h2>Morizuq</h2>
+        <a href="/">Morizuq</a>
           <ul className="flex">
-            <li className="ml-4">
-              <a href="/">Home</a>
-            </li>
             <li className="ml-4">
               <a href="/about">About</a>
             </li>
