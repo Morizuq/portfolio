@@ -9,7 +9,7 @@ import { useState } from "react";
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
 
     const inputs = Array.from(e.currentTarget.elements) as HTMLFormElement[];
@@ -21,8 +21,23 @@ export default function Contact() {
         {} as Record<string, string>
       );
 
-    console.log({ inputs });
     console.log({ data });
+    console.log(JSON.stringify(data))
+
+    fetch("https://lonely-bull-trench-coat.cyclic.app/api/v1/mail", {
+      mode: 'no-cors',
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+
+      body: JSON.stringify(data),
+    }).then((data) => {
+      console.log()
+      if (!data.ok) {
+        throw Error("Something Went Wrong");
+      }
+    });
 
     setTimeout(() => {
       setSubmitted(true);
