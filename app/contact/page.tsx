@@ -9,39 +9,40 @@ import { useState } from "react";
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>): Promise<void> => {
-    e.preventDefault();
+  const handleSubmit = async (
+    e: React.SyntheticEvent<HTMLFormElement>
+  ): Promise<void> => {
+    try {
+      e.preventDefault();
 
-    const inputs = Array.from(e.currentTarget.elements) as HTMLFormElement[];
+      const inputs = Array.from(e.currentTarget.elements) as HTMLFormElement[];
 
-    const data = inputs
-      .filter((input) => input.name)
-      .reduce(
-        (obj, input) => Object.assign(obj, { [input.name]: input.value }),
-        {} as Record<string, string>
-      );
+      const data = inputs
+        .filter((input) => input.name)
+        .reduce(
+          (obj, input) => Object.assign(obj, { [input.name]: input.value }),
+          {} as Record<string, string>
+        );
 
-    console.log({ data });
-    console.log(JSON.stringify(data))
+      console.log({ data });
+      console.log(JSON.stringify(data));
 
-    fetch("https://lonely-bull-trench-coat.cyclic.app/api/v1/mail", {
-      mode: 'no-cors',
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      await fetch("https://lonely-bull-trench-coat.cyclic.app/api/v1/mail", {
+        mode: "cors",
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
 
-      body: JSON.stringify(data),
-    }).then((data) => {
-      console.log()
-      if (!data.ok) {
-        throw Error("Something Went Wrong");
-      }
-    });
+        body: JSON.stringify(data),
+      });
 
-    setTimeout(() => {
-      setSubmitted(true);
-    }, 100);
+      setTimeout(() => {
+        setSubmitted(true);
+      }, 100);
+    } catch (error) {
+      throw Error("Something Went Wrong");
+    }
   };
 
   return (
@@ -58,8 +59,14 @@ export default function Contact() {
             </p>
           </div>
         ) : (
+          // <form
+          //   className="glass w-[100%] sm:w-[70%] md:w-[60%] p-4 sm:p-11"
+          //   onSubmit={handleSubmit}
+          //   method="POST"
+          // >
           <form
             className="glass w-[100%] sm:w-[70%] md:w-[60%] p-4 sm:p-11"
+            data-netlify="true"
             onSubmit={handleSubmit}
             method="POST"
           >
