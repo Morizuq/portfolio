@@ -28,12 +28,11 @@ export default function Contact() {
           {} as Record<string, string>
         );
 
-
       await send(
-        process.env.NEXT_PUBLIC_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID!,
+       'service_8bvgwzn',
+        'template_rju1mi7',
         data,
-        process.env.NEXT_PUBLIC_PUBLIC_KEY
+        'Q9kBN7hAMfWZszfHk'
       );
 
       setTimeout(() => {
