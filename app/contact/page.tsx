@@ -28,8 +28,6 @@ export default function Contact() {
           {} as Record<string, string>
         );
 
-      console.log({ data });
-      console.log(JSON.stringify(data));
 
       await send(
         process.env.NEXT_PUBLIC_SERVICE_ID!,
