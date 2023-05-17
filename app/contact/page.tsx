@@ -1,4 +1,5 @@
 "use client";
+import { send } from "@emailjs/browser";
 import { ImTwitter } from "react-icons/im";
 import { GrLinkedin } from "react-icons/gr";
 import { FaGithub } from "react-icons/fa";
@@ -8,6 +9,9 @@ import { useState } from "react";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  // const [sendError, setSender] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [message, setMessage] = useState('');
 
   const handleSubmit = async (
     e: React.SyntheticEvent<HTMLFormElement>
@@ -27,15 +31,12 @@ export default function Contact() {
       console.log({ data });
       console.log(JSON.stringify(data));
 
-      await fetch("https://lonely-bull-trench-coat.cyclic.app/api/v1/mail", {
-        mode: "cors",
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-
-        body: JSON.stringify(data),
-      });
+      await send(
+        process.env.NEXT_PUBLIC_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID!,
+        data,
+        process.env.NEXT_PUBLIC_PUBLIC_KEY
+      );
 
       setTimeout(() => {
         setSubmitted(true);
@@ -66,7 +67,6 @@ export default function Contact() {
           // >
           <form
             className="glass w-[100%] sm:w-[70%] md:w-[60%] p-4 sm:p-11"
-            data-netlify="true"
             onSubmit={handleSubmit}
             method="POST"
           >

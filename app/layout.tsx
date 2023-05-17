@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Pridi } from "next/font/google";
+import Link from "next/link";
 
 const pridi = Pridi({
   weight: ["400"],
@@ -20,16 +21,16 @@ export default function RootLayout({
     <html lang="en">
       <body className={pridi.className}>
         <nav className="flex justify-between mt-5 pl-4 pr-4 mb-5">
-        <a href="/">Morizuq</a>
+          <Link href="/">Morizuq</Link>
           <ul className="flex">
             <li className="ml-4">
-              <a href="/about">About</a>
-            </li>
-            <li className="ml-4"> 
-              <a href="/projects">Projects</a>
+              <Link href="/about">About</Link>
             </li>
             <li className="ml-4">
-              <a href="/contact">Contact</a>
+              <Link href="/projects">Projects</Link>
+            </li>
+            <li className="ml-4">
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
         </nav>
