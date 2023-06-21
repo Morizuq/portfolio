@@ -14,8 +14,8 @@ export default function Home() {
         Fullstack Developer
       </h3>
       <ul className="flex sm:flex-row sm:space-x-2 space-x-0 flex-col text-light text-space">
-        <li>Web Developer</li>
         <li>Software Engineer</li>
+        <li>Back End Developer</li>
         <li>Programmer</li>
       </ul>
 
