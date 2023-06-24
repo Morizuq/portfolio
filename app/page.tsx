@@ -21,7 +21,7 @@ export default function Home() {
 
       <a
         className="mt-5 btn hover:cursor-pointer hover:translate-y-1 ease-in duration-100 shadow-custom"
-        href="/Morizuq(resume).pdf"
+        href="/Morizuq-Shoneye-CV.pdf"
         download
       >
         Get My CV
