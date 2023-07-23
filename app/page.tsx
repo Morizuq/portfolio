@@ -15,8 +15,8 @@ export default function Home() {
       </h3>
       <ul className="flex sm:flex-row sm:space-x-2 space-x-0 flex-col text-light text-space">
         <li>Software Engineer</li>
-        <li>Back End Developer</li>
-        <li>Programmer</li>
+        <li>Mobile Developer</li>
+        <li>Web Developer</li>
       </ul>
 
       <a
