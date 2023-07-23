@@ -7,10 +7,10 @@ export default function About() {
       <p className="mb-4 mt-4">
         Hi, I am <span className="text-gold">Morizuq</span>, a Full Stack
         Developer with a strong skillset in{" "}
-        <span className={courgette.className}>Javascript/Typescript</span>,{" "}
+        <span className={courgette.className}>MERN Stack</span>,{" "}
         <span className={courgette.className}>Dart</span>,{" "}
-        <span className={courgette.className}>React</span>,{" "}
         <span className={courgette.className}>Flutter</span>,{" "}
+        <span className={courgette.className}>Golang</span>,{" "}
         <span className={courgette.className}>Nest.js</span>, and{" "}
         <span className={courgette.className}>Linux</span>. Communication is one
         of my strongest assets, which allows me to work seamlessly with my team
@@ -28,7 +28,7 @@ export default function About() {
 
       <p className="my-4">
         So if you're looking for a reliable, communicative, and passionate
-        fullstack developer, <span className={`text-gold`}>I'm your guy!</span>
+        Full Stack developer, <span className={`text-gold`}>I'm your guy!</span>
       </p>
     </div>
   );
