@@ -63,7 +63,7 @@ export default function Contact() {
           //   method="POST"
           // >
           <form
-            className="glass w-[100%] sm:w-[70%] md:w-[60%] p-4 sm:p-11"
+            className="glass w-[100%] sm:w-[70%] md:w-[50%] p-4 sm:p-11"
             onSubmit={handleSubmit}
             method="POST"
           >
