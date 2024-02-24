@@ -1,5 +1,3 @@
-import { courgette } from "../page";
-
 export default function About() {
   return (
     <div className="min-[1060px]:absolute min-[1060px]:top-[50%] min-[1060px]:left-[50%] min-[1060px]:translate-y-[-50%] min-[1060px]:translate-x-[-50%] my-9 mx-auto glass w-[80%] min-[1060px]:w-auto p-[2rem] sm:p-[3rem] shadow-custom text-white">

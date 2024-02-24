@@ -1,6 +1,6 @@
 import { Courgette } from "next/font/google";
 
-export const courgette = Courgette({
+const courgette = Courgette({
   weight: ["400"],
   subsets: ["latin"],
 });
@@ -20,7 +20,7 @@ export default function Home() {
       </ul>
 
       <a
-        className="mt-5 btn hover:cursor-pointer hover:translate-y-1 animate-ping ease-in duration-100 shadow-custom"
+        className="mt-5 btn hover:cursor-pointer hover:translate-y-1 ease-in duration-100 shadow-custom"
         href="/Morizuq-Shoneye-CV.pdf"
         download
       >
