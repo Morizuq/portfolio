@@ -29,10 +29,10 @@ export default function Contact() {
         );
 
       await send(
-       'service_8bvgwzn',
-        'template_rju1mi7',
+        "service_8bvgwzn",
+        "template_rju1mi7",
         data,
-        'Q9kBN7hAMfWZszfHk'
+        "Q9kBN7hAMfWZszfHk"
       );
 
       setTimeout(() => {

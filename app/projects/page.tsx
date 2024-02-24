@@ -1,53 +1,69 @@
 "use client";
-import ApiCard from "@/components/apiCard";
 import Card from "@/components/card";
-import { useEffect, useState } from "react";
 
 const cardObj = [
   {
-    name: "Natours-CSS",
-    link: "https://css-nat.netlify.app",
-    img: "/natours.png",
-    gitlink: "https://github.com/Morizuq/Natours-css",
+    name: "FiatPlug",
+    link: "https://play.google.com/store/apps/details?id=com.eachblock.fiatplug",
+    img: "/fiatplug-1.jpg",
+    gitlink: "",
+    isPrivate: true,
+    isLive: true,
   },
   {
-    name: "Nexter",
-    link: "https://nexter-css.netlify.app",
-    img: "/nexter1.png",
-    gitlink: "https://github.com/Morizuq/Nexter-css",
+    name: "Regimen",
+    link: "",
+    img: "/regimen-2.jpg",
+    gitlink: "",
+    isPrivate: true,
+    isLive: false,
   },
   {
-    name: "Trillio",
-    link: "https://trillio-css.netlify.app",
-    img: "/trillio.png",
-    gitlink: "https://github.com/Morizuq/Trillo-css",
+    name: "Artisan",
+    link: "",
+    img: "/artisan-1.jpg",
+    gitlink: "",
+    isPrivate: true,
+    isLive: false,
   },
-  {
-    name: "Natours",
-    link: "https://adventurous-pleat-foal.cyclic.app",
-    img: "/natback1.png",
-    gitlink: "https://github.com/Morizuq/Natours",
-  },
+  // {
+  //   name: "Nexter",
+  //   link: "https://nexter-css.netlify.app",
+  //   img: "/nexter1.png",
+  //   gitlink: "https://github.com/Morizuq/Nexter-css",
+  // },
+  // {
+  //   name: "Trillio",
+  //   link: "https://trillio-css.netlify.app",
+  //   img: "/trillio.png",
+  //   gitlink: "https://github.com/Morizuq/Trillo-css",
+  // },
+  // {
+  //   name: "Natours",
+  //   link: "https://adventurous-pleat-foal.cyclic.app",
+  //   img: "/natback1.png",
+  //   gitlink: "https://github.com/Morizuq/Natours",
+  // },
 ];
 
 export default function Projects() {
-  const [repos, setRepos] = useState<any[]>([]);
+  // const [repos, setRepos] = useState<any[]>([]);
 
-  const fetchRepos = async () => {
-    try {
-      const data = await fetch(`https://api.github.com/users/Morizuq/repos`);
-      const res = await data.json();
-      setRepos(res);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const fetchRepos = async () => {
+  //   try {
+  //     const data = await fetch(`https://api.github.com/users/Morizuq/repos`);
+  //     const res = await data.json();
+  //     setRepos(res);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  useEffect(() => {
-    fetchRepos();
-  }, []);
+  // useEffect(() => {
+  //   fetchRepos();
+  // }, []);
 
-  const list = repos.slice(0, 4);
+  // const list = repos.slice(0, 4);
   return (
     <>
       <h1 className="text-center sm:text-4xl text-3xl grad uppercase">
@@ -59,12 +75,12 @@ export default function Projects() {
         ))}
       </div>
 
-      <h1 className="text-center uppercase">Github Repos</h1>
+      {/* <h1 className="text-center uppercase">Github Repos</h1>
       <div className="p-8 flex flex-row flex-wrap justify-around">
         {list.map((el) => (
           <ApiCard {...el} />
         ))}
-      </div>
+      </div> */}
     </>
   );
 }

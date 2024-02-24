@@ -4,6 +4,8 @@ import { GoEye } from "react-icons/go";
 interface CardT {
   name: string;
   link: string;
+  isPrivate: boolean;
+  isLive: boolean;
   img: string;
   gitlink: string;
 }
@@ -20,12 +22,18 @@ export default function Card(props: CardT) {
           >
             {props.name}
           </a>
-          <a href={props.gitlink} className="ml-auto mr-2" target="_blank">
-            <FaGithubAlt className="hover:text-[var(--color-primary)] hover:scale-125 ease-in-out duration-500" />
-          </a>
-          <a href={props.link} target="_blank">
-            <GoEye className="hover:text-[var(--color-primary)] hover:scale-125 ease-in-out duration-500" />
-          </a>
+          <div className="ml-auto">
+            {props.isPrivate ? null : (
+              <a href={props.gitlink} target="_blank" className="mr-2">
+                <FaGithubAlt className="hover:text-[var(--color-primary)] hover:scale-125 ease-in-out duration-500" />
+              </a>
+            )}
+            {props.isLive ? (
+              <a href={props.link} target="_blank">
+                <GoEye className="hover:text-[var(--color-primary)] hover:scale-125 ease-in-out duration-500" />
+              </a>
+            ) : null}
+          </div>
         </div>
       </div>
     </div>
