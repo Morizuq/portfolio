@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import "./globals.css";
 import { Pridi } from "next/font/google";
 import Link from "next/link";
@@ -7,9 +8,9 @@ const pridi = Pridi({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Morizuq's Porfolio",
-  description: "Built with love",
+export const metadata: Metadata = {
+  title: "Morizuq Shoneye | Mobile Engineer",
+  description: " Morizuq Shoneye is a Mobile Engineer with experience in building user friendly applications",
 };
 
 export default function RootLayout({
@@ -19,6 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
+      </head>
       <body className={pridi.className}>
         <nav className="flex justify-between mt-5 pl-4 pr-4 mb-5">
           <Link href="/">Morizuq</Link>

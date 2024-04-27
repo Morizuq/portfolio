@@ -15,7 +15,7 @@ export default function Home() {
       </h3>
       <ul className="flex sm:flex-row sm:space-x-2 space-x-0 flex-col text-light text-space">
         <li>FLUTTER</li>
-        <li>KOTLIN</li>
+        <li>REACT-NATIVE</li>
         <li>ANDROID</li>
       </ul>
 
