@@ -48,7 +48,7 @@ export default function Contact() {
       <h2 className="uppercase sm:text-4xl text-3xl text-center mb-9 grad">
         Contact Me
       </h2>
-      <div className="flex sm:flex-row flex-col justify-between">
+      <div className="flex sm:flex-row flex-col justify-between mt-[5%]">
         {submitted ? (
           <div className="h-[5rem] my-auto api-card">
             <h1 className="text-[1.2rem] text-center">Thank You!</h1>
