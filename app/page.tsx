@@ -16,8 +16,8 @@ export default function Home() {
       <ul className="flex sm:flex-row sm:space-x-2 space-x-0 flex-col text-light text-space">
         <li>FLUTTER</li>
         <li>REACT-NATIVE</li>
-        <li>ANDROID</li>
-        <li>GOLANG</li>
+        <li>NODE.JS</li>
+        <li>SOLIDITY</li>
       </ul>
 
       <a
