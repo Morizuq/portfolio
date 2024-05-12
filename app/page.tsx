@@ -14,10 +14,9 @@ export default function Home() {
         Mobile Engineer
       </h3>
       <ul className="flex sm:flex-row sm:space-x-2 space-x-0 flex-col text-light text-space">
-        <li>FLUTTER</li>
-        <li>REACT-NATIVE</li>
-        <li>NODE.JS</li>
-        <li>SOLIDITY</li>
+        <li>Flutter</li>
+        <li>Kotlin</li>
+        <li>Node.js</li>
       </ul>
 
       <a
